@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Post-High School Pathways Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Optional: Google Analytics (GA4) gtag snippet goes here.
+       The onclick tracking on the trades CTA assumes gtag() is defined.
+       Example (replace G-XXXXXX with your tag):
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXX');
+  </script>
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div>
+          <p class="brand-kicker">Post-High School Pathways</p>
+          <h1 class="brand-title">Career & Education Explorer</h1>
+        </div>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#assessments">Career Assessments</a>
+        <a href="#skills">Skills & Experiences</a>
+        <a href="#trades">Skilled Trades & Apprenticeships</a>
+        <a href="#networking">Networking & Jobs</a>
+        <a href="#school-local">School & Local</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h2>Explore what comes after high school.</h2>
+          <p>
+            Use this guide to explore careers, compare post-secondary paths
+            (college, training, apprenticeships, and more), and find real-world
+            experiences that can help you test ideas before you commit.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#assessments">Start with a quiz</a>
+            <a class="btn btn-outline" href="#skills">Build skills & experience</a>
+            <!-- PROMINENT TRADES CTA (instrumented for Google Analytics) -->
+            <a
+              class="btn btn-outline"
+              href="#trades"
+              id="cta-trades-info"
+              onclick="if (typeof gtag === 'function') { gtag('event', 'trades_cta_click', { event_category: 'career_trades', event_label: 'Hero Trades CTA' }); }"
+            >
+              Learn about skilled trades & apprenticeships
+            </a>
+          </div>
+          <p class="hero-note">
+            Tip: You don’t have to pick one perfect path today. These tools help you
+            <strong>try options, compare outcomes, and adjust over time.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Online Career Exploration & Assessment -->
+    <section id="assessments" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Online Career Exploration &amp; Assessment</h2>
+          <p>
+            Start here if you’re unsure what you want to do. These tools use
+            your interests, aptitudes, and values to surface career ideas and
+            the education or training that goes with them.
+          </p>
+        </header>
+
+        <div class="resource-grid">
+          <!-- CareerOneStop -->
+          <article class="resource-card">
+            <h3>CareerOneStop – Interest &amp; Skills Assessments</h3>
+            <p class="resource-tag">Run by the U.S. Department of Labor</p>
+            <p>
+              CareerOneStop offers short, free assessments that ask about the
+              kinds of activities you enjoy and the skills you want to use.
+              You get a list of matching careers with typical wages, job
+              outlook, and links to required education or training programs.
+            </p>
+            <p>
+              It’s a good starting point if you don’t have a clear target yet
+              and want to see a broad range of options tied to real labor
+              market data.
+            </p>
+            <p class="resource-meta">
+              Best for: Students who want a quick, research-based snapshot of
+              careers that fit their interests.
+            </p>
+            <a class="resource-link" href="https://www.careeronestop.org/" target="_blank" rel="noopener">
+              Visit CareerOneStop
+            </a>
+          </article>
+
+          <!-- BigFuture -->
+          <article class="resource-card">
+            <h3>BigFuture (College Board) – Careers &amp; Multiple Pathways</h3>
+            <p class="resource-tag">Integrated with college &amp; scholarship tools</p>
+            <p>
+              BigFuture lets you take short quizzes to connect interests and
+              strengths with career families. For each career, you can see what
+              people do on the job, typical salary ranges, and the education
+              required—from certificates and 2-year degrees to 4-year programs
+              and beyond.
+            </p>
+            <p>
+              Because BigFuture also hosts college, scholarship, and technical
+              program searches, you can move directly from “this sounds
+              interesting” to “where could I study this and how might I pay for
+              it?”
+            </p>
+            <p class="resource-meta">
+              Best for: Students comparing <em>multiple pathways</em> (college,
+              certificates, technical programs) side-by-side.
+            </p>
+            <a class="resource-link" href="https://bigfuture.collegeboard.org/explore-careers" target="_blank" rel="noopener">
+              Explore careers on BigFuture
+            </a>
+          </article>
+
+          <!-- O*NET -->
+          <article class="resource-card">
+            <h3>O*NET OnLine – Deep Dive into Occupations</h3>
+            <p class="resource-tag">Detailed data for 900+ U.S. occupations</p>
+            <p>
+              O*NET is the federal government’s master database of jobs. Each
+              occupation profile breaks down day-to-day tasks, required
+              knowledge and skills, typical education levels, work styles,
+              technology used, and wages.
+            </p>
+            <p>
+              Students can browse occupations by interest area (like “Helping
+              People” or “Building &amp; Fixing Things”), see related careers,
+              and compare how much education each path usually requires.
+            </p>
+            <p class="resource-meta">
+              Best for: Digging into the details of a specific job you’re
+              already curious about.
+            </p>
+            <a class="resource-link" href="https://www.onetonline.org/" target="_blank" rel="noopener">
+              Explore occupations on O*NET
+            </a>
+          </article>
+
+          <!-- YouScience -->
+          <article class="resource-card">
+            <h3>YouScience – Aptitude-Based Career Discovery</h3>
+            <p class="resource-tag">Aptitudes + interests &rarr; best-fit careers</p>
+            <p>
+              Unlike self-report surveys, YouScience uses interactive “brain
+              games” to measure aptitudes such as spatial reasoning, numerical
+              reasoning, and pattern recognition. Those aptitudes, combined
+              with your interests, are matched to hundreds of careers and
+              programs where people with similar profiles tend to thrive.
+            </p>
+            <p>
+              Many schools provide access through their counseling or CTE
+              offices, giving students individualized reports they can discuss
+              with counselors and families.
+            </p>
+            <p class="resource-meta">
+              Best for: Students who like data-driven feedback about what they
+              are naturally good at.
+            </p>
+            <a class="resource-link" href="https://www.youscience.com/" target="_blank" rel="noopener">
+              Learn about YouScience
+            </a>
+          </article>
+
+          <!-- My Next Move -->
+          <article class="resource-card">
+            <h3>My Next Move – Simple Career Explorer</h3>
+            <p class="resource-tag">Student-friendly interface from U.S. DOL</p>
+            <p>
+              My Next Move is a streamlined site where you can search by
+              keywords (“nurse,” “video games”), browse by industry, or take an
+              “Interest Profiler” quiz. Each career page is written in
+              plain language and shows typical tasks, necessary skills,
+              education, salary, and job outlook.
+            </p>
+            <p>
+              It’s intentionally lightweight and visual, making it less
+              overwhelming than a full database while still linking back to
+              official labor-market information.
+            </p>
+            <p class="resource-meta">
+              Best for: Quick exploration when you want straightforward,
+              one-page snapshots of careers.
+            </p>
+            <a class="resource-link" href="https://www.mynextmove.org/" target="_blank" rel="noopener">
+              Visit My Next Move
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skill Building & Experiential Learning -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <header class="section-header">
+          <h2>Skill Building &amp; Experiential Learning</h2>
+          <p>
+            These options let you try out fields, build real skills, and
+            collect experiences that strengthen college, apprenticeship, or job
+            applications.
+          </p>
+        </header>
+
+        <div class="resource-grid">
+          <!-- Khan Academy / Coursera -->
+          <article class="resource-card">
+            <h3>Khan Academy &amp; Coursera – Online Courses</h3>
+            <p class="resource-tag">Academic + career skills, mostly free</p>
+            <p>
+              <strong>Khan Academy</strong> offers free, self-paced courses in
+              math, science, economics, computer programming, and life skills.
+              Their “Careers” video series lets you hear directly from people
+              in different jobs about how they got there and what their work is
+              like.
+            </p>
+            <p>
+              <strong>Coursera</strong> hosts university-level courses and
+              career certificates in areas like data science, IT support,
+              business, and health. Many can be audited for free, and some
+              include beginner-friendly pathways for high schoolers.
+            </p>
+            <p class="resource-meta">
+              Best for: Building concrete skills (coding, data, languages,
+              business) and testing your interest in a subject before
+              committing to a major.
+            </p>
+            <div class="resource-links-inline">
+              <a href="https://www.khanacademy.org/" target="_blank" rel="noopener">Visit Khan Academy</a>
+              <a href="https://www.coursera.org/" target="_blank" rel="noopener">Visit Coursera</a>
+            </div>
+          </article>
+
+          <!-- Roadtrip Nation -->
+          <article class="resource-card">
+            <h3>Roadtrip Nation – Stories &amp; Project-Based Exploration</h3>
+            <p class="resource-tag">Video library + short course</p>
+            <p>
+              Roadtrip Nation produces documentary-style videos of real people
+              explaining how they found their paths—from traditional careers to
+              unconventional jobs you might never have heard of. Their
+              project-based course guides you through reflecting on your own
+              interests, interviewing someone you admire, and mapping possible
+              paths.
+            </p>
+            <p>
+              Many schools and nonprofits use Roadtrip Nation materials to make
+              career exploration feel more human and less like filling out
+              forms.
+            </p>
+            <p class="resource-meta">
+              Best for: Students who learn best through stories and real-life
+              examples, not just data tables.
+            </p>
+            <a class="resource-link" href="https://roadtripnation.com/" target="_blank" rel="noopener">
+              Explore Roadtrip Nation
+            </a>
+          </article>
+
+          <!-- VirtualJobShadow / Nepris / Virtual STEM -->
+          <article class="resource-card">
+            <h3>Virtual Job Shadowing &amp; STEM Experiences</h3>
+            <p class="resource-tag">Explore workplaces without leaving home</p>
+            <p>
+              Platforms such as <strong>VirtualJobShadow</strong> offer
+              hundreds of short “day-in-the-life” videos that show real
+              workers on the job, across many industries. Students can browse
+              by career cluster and see what typical tasks and environments
+              look like.
+            </p>
+            <p>
+              Services like <strong>Nepris/Pathful Connect</strong> virtually
+              connect classrooms with professionals for live career talks and
+              Q&amp;A sessions, expanding access to role models in fields that
+              may not exist locally.
+            </p>
+            <p>
+              More broadly, many organizations now offer
+              <strong>“virtual STEM adventures”</strong> and internships—online
+              labs, simulations, and remote projects that let you experiment
+              with engineering, coding, and science while getting feedback
+              from mentors.
+            </p>
+            <p class="resource-meta">
+              Best for: Students who want to observe real workplaces or connect
+              with industry professionals but can’t easily travel.
+            </p>
+            <div class="resource-links-inline">
+              <a href="https://www.virtualjobshadow.com/" target="_blank" rel="noopener">
+                Visit VirtualJobShadow
+              </a>
+              <a href="https://www.pathful.com/connect" target="_blank" rel="noopener">
+                Learn about Pathful / Nepris
+              </a>
+              <a href="https://www.google.com/search?q=virtual+STEM+adventures+for+students" target="_blank" rel="noopener">
+                Search virtual STEM adventures
+              </a>
+            </div>
+          </article>
+
+          <!-- YouthWorks MA -->
+          <article class="resource-card">
+            <h3>YouthWorks (Massachusetts)</h3>
+            <p class="resource-tag">Paid, short-term jobs for teens &amp; young adults</p>
+            <p>
+              YouthWorks is a Massachusetts state-funded employment program for
+              ages 14–25. Participants are placed into paid, short-term
+              positions with public, private, and nonprofit employers and
+              receive job-readiness coaching on skills like communication,
+              dependability, and workplace expectations.
+            </p>
+            <p>
+              For many first-time workers, YouthWorks is a bridge into the
+              labor market and a way to explore careers such as childcare,
+              parks and recreation, clerical work, or community health while
+              earning income.
+            </p>
+            <p class="resource-meta">
+              Best for: MA students who want supervised, structured work
+              experience plus a paycheck.
+            </p>
+            <a class="resource-link" href="https://www.mass.gov/service-details/youthworks-summer-jobs-program" target="_blank" rel="noopener">
+              Learn about YouthWorks
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: Skilled Trades & Apprenticeships (prominently organized) -->
+    <section id="trades" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Skilled Trades &amp; Apprenticeships</h2>
+          <p>
+            Interested in working with your hands, solving concrete problems, and earning
+            while you learn? These resources focus specifically on skilled trades and
+            registered apprenticeship programs.
+          </p>
+        </header>
+
+        <div class="resource-grid">
+          <!-- CTE Programs -->
+          <article class="resource-card">
+            <h3>High School CTE Programs</h3>
+            <p class="resource-tag">Hands-on training in high-demand fields</p>
+            <p>
+              Career &amp; Technical Education (CTE) programs in high schools and regional
+              vocational centers offer courses plus lab or shop time in areas like health
+              careers, IT, construction, manufacturing, culinary arts, and digital media.
+              Many lead to industry certifications, college credit, or direct connections
+              to apprenticeship programs.
+            </p>
+            <p>
+              Ask your counselor or district CTE office what pathways exist in your region
+              and how they connect to local employers and apprenticeship options.
+            </p>
+            <p class="resource-meta">
+              Best for: Students who want to graduate with both a diploma and job-ready skills
+              in specific trades or technical fields.
+            </p>
+          </article>
+
+          <!-- mikeroweWORKS -->
+          <article class="resource-card">
+            <h3>mikeroweWORKS – Work Ethic Scholarships</h3>
+            <p class="resource-tag">Scholarships for trade &amp; technical training</p>
+            <p>
+              The mikeroweWORKS Foundation’s Work Ethic Scholarship helps students pay for
+              training in high-demand skilled trades such as welding, HVAC, plumbing,
+              electrical work, heavy equipment operation, and more. Applications emphasize
+              work ethic, personal responsibility, and a commitment to hands-on careers.
+            </p>
+            <p>
+              Awards can help cover tuition, tools, and certification costs, reducing debt
+              for students who choose trade programs over traditional four-year colleges.
+            </p>
+            <p class="resource-meta">
+              Best for: Students committed to high-skill, high-demand trades who are ready
+              to apply to an approved training program.
+            </p>
+            <a class="resource-link" href="https://mikeroweworks.org/scholarship/" target="_blank" rel="noopener">
+              Explore mikeroweWORKS scholarships
+            </a>
+          </article>
+
+          <!-- Apprenticeship.gov -->
+          <article class="resource-card">
+            <h3>Apprenticeship.gov – Earn While You Learn</h3>
+            <p class="resource-tag">Registered apprenticeships across many trades</p>
+            <p>
+              Apprenticeship.gov is the federal portal for finding and understanding
+              registered apprenticeships in fields like construction, advanced manufacturing,
+              IT, transportation, and healthcare. As an apprentice, you are hired by an
+              employer, receive structured on-the-job training plus related classroom
+              instruction, and earn a wage that typically increases over time.
+            </p>
+            <p>
+              The site’s “Career Seekers” section explains how apprenticeships work,
+              provides a searchable job finder, and links to local support organizations—
+              including American Job Centers—that can help you apply.
+            </p>
+            <p class="resource-meta">
+              Best for: Students who prefer learning by doing and want to earn money while
+              gaining a recognized credential in a skilled trade.
+            </p>
+            <a class="resource-link" href="https://www.apprenticeship.gov/" target="_blank" rel="noopener">
+              Explore Apprenticeship.gov
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Networking & Job Searching -->
+    <section id="networking" class="section section-alt">
+      <div class="container">
+        <header class="section-header">
+          <h2>Networking &amp; Job Searching</h2>
+          <p>
+            These tools help you build a professional presence, find part-time
+            jobs and internships, and learn what employers actually look for in
+            early-career candidates.
+          </p>
+        </header>
+
+        <div class="resource-grid">
+          <!-- LinkedIn -->
+          <article class="resource-card">
+            <h3>LinkedIn – Professional Networking Profile</h3>
+            <p class="resource-tag">For students 16+ with parent/guardian guidance</p>
+            <p>
+              LinkedIn is the standard platform for professional networking.
+              High school students can create a basic profile highlighting
+              coursework, projects, volunteer work, and extracurriculars, then
+              connect with mentors, alumni, and local employers.
+            </p>
+            <p>
+              Many companies post internships, apprenticeships, and part-time
+              roles on LinkedIn, and the platform’s “Alumni” and “People”
+              search features help you see real paths taken by people in jobs
+              you’re curious about.
+            </p>
+            <p class="resource-meta">
+              Best for: Building a credible online presence and staying in
+              touch with adult mentors you meet.
+            </p>
+            <a class="resource-link" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+              Go to LinkedIn
+            </a>
+          </article>
+
+          <!-- WayUp / Internship sites -->
+          <article class="resource-card">
+            <h3>WayUp &amp; Internship Platforms</h3>
+            <p class="resource-tag">Internships &amp; entry-level roles</p>
+            <p>
+              <strong>WayUp</strong> focuses on internships and early-career
+              jobs, especially for college students and recent grads, and helps
+              candidates get discovered through profile-based matching.
+            </p>
+            <p>
+              Other internship platforms (such as InternJobs or
+              InternshipFinder) aggregate thousands of listings and often
+              include guides on writing résumés, preparing for interviews, and
+              converting internships into full-time offers.
+            </p>
+            <p>
+              Historically, <strong>Internships.com</strong> was a major
+              internship search site; today, its role is largely filled by
+              these newer platforms and by general job boards.
+            </p>
+            <p class="resource-meta">
+              Best for: Students ready to apply for specific internships or
+              part-time jobs.
+            </p>
+            <div class="resource-links-inline">
+              <a href="https://www.wayup.com/" target="_blank" rel="noopener">Visit WayUp</a>
+              <a href="https://www.internshipfinder.com/" target="_blank" rel="noopener">Explore InternshipFinder</a>
+              <a href="https://www.internjobs.com/" target="_blank" rel="noopener">Explore InternJobs</a>
+            </div>
+          </article>
+
+          <!-- American Job Centers -->
+          <article class="resource-card">
+            <h3>American Job Centers</h3>
+            <p class="resource-tag">Free, in-person career help across the U.S.</p>
+            <p>
+              American Job Centers (AJCs) provide “one-stop” local access to
+              career counseling, job listings, résumé and interview workshops,
+              and training referrals. Many centers have youth specialists who
+              understand high school and post-secondary transitions.
+            </p>
+            <p>
+              AJCs can also connect you to apprenticeship opportunities,
+              subsidized training, or local employers willing to hire young
+              workers and provide on-the-job training.
+            </p>
+            <p class="resource-meta">
+              Best for: Students who want face-to-face guidance or need help
+              navigating financial aid and training programs.
+            </p>
+            <a class="resource-link" href="https://www.careeronestop.org/LocalHelp/AmericanJobCenters/find-american-job-centers.aspx" target="_blank" rel="noopener">
+              Find an American Job Center
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- School & Local Resources -->
+    <section id="school-local" class="section section-alt">
+      <div class="container">
+        <header class="section-header">
+          <h2>School &amp; Local Resources</h2>
+          <p>
+            Online tools are powerful, but they work best when combined with
+            conversations and support from people who know your local context.
+          </p>
+        </header>
+
+        <div class="resource-grid">
+          <!-- School Counselors -->
+          <article class="resource-card">
+            <h3>School Counselors</h3>
+            <p class="resource-tag">Your first stop for personalized guidance</p>
+            <p>
+              School counselors can help you interpret assessment results,
+              compare college and training options, and understand graduation
+              requirements. They often know about local scholarships, bridge
+              programs, dual-enrollment options, and support services you won’t
+              discover online.
+            </p>
+            <p>
+              Bringing printed results from tools like CareerOneStop, My Next
+              Move, or YouScience can make these conversations more concrete
+              and action-oriented.
+            </p>
+            <p class="resource-meta">
+              Best for: Turning online exploration into an actual plan for next
+              year and beyond.
+            </p>
+          </article>
+
+          <!-- CTE reminder (school-level) -->
+          <article class="resource-card">
+            <h3>Local CTE &amp; Dual-Enrollment Options</h3>
+            <p class="resource-tag">Combine high school with college or training</p>
+            <p>
+              Many districts offer dual-enrollment (earning college credit in
+              high school), early college, or partnerships with technical
+              schools and community colleges. These can lower the cost and time
+              required for degrees and certificates, including pathways aligned
+              with skilled trades.
+            </p>
+            <p>
+              Your counselor or CTE coordinator can help you identify which
+              programs you qualify for and how they connect to careers you’ve
+              explored on this site.
+            </p>
+            <p class="resource-meta">
+              Best for: Students who want to start earning college or technical
+              credits before high school graduation.
+            </p>
+          </article>
+        </div>
+
+        <div class="callout">
+          <h3>Putting it all together</h3>
+          <p>
+            A practical sequence might look like: take an interest or aptitude
+            assessment &rarr; explore matching careers on BigFuture, O*NET, or
+            My Next Move &rarr; identify needed education or training &rarr;
+            talk with your school counselor and local American Job Center &rarr;
+            compare college, skilled trades, and apprenticeships &rarr;
+            build skills and experience through online courses, CTE, YouthWorks
+            (if you’re in MA), internships, or apprenticeships.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Post-High School Pathways Explorer</p>
+      <a href="#top" class="back-to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Keep the auto-year helper if you like -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
