@@ -9,15 +9,26 @@
   <!-- Optional: Google Analytics (GA4) gtag snippet goes here.
        The onclick tracking on the trades CTA assumes gtag() is defined.
        Example (replace G-XXXXXX with your tag):
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
+  -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJ877GER2E"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXX');
+
+    // 1. Logic to grab user_id from URL (e.g., ?user_id=12345)
+    const urlParams = new URLSearchParams(window.location.search);
+    const userIdFromUrl = urlParams.get('user_id');
+
+    // 2. Configure GA4 with the User ID if it exists
+    const gaConfig = {};
+    if (userIdFromUrl) {
+      gaConfig['user_id'] = userIdFromUrl;
+    }
+
+    gtag('config', 'G-QJ877GER2E', gaConfig);
   </script>
-  -->
+  
 </head>
 <body>
   <header class="site-header">
@@ -275,73 +286,6 @@
             </p>
             <a class="resource-link" href="https://roadtripnation.com/" target="_blank" rel="noopener">
               Explore Roadtrip Nation
-            </a>
-          </article>
-
-          <!-- VirtualJobShadow / Nepris / Virtual STEM -->
-          <article class="resource-card">
-            <h3>Virtual Job Shadowing &amp; STEM Experiences</h3>
-            <p class="resource-tag">Explore workplaces without leaving home</p>
-            <p>
-              Platforms such as <strong>VirtualJobShadow</strong> offer
-              hundreds of short “day-in-the-life” videos that show real
-              workers on the job, across many industries. Students can browse
-              by career cluster and see what typical tasks and environments
-              look like.
-            </p>
-            <p>
-              Services like <strong>Nepris/Pathful Connect</strong> virtually
-              connect classrooms with professionals for live career talks and
-              Q&amp;A sessions, expanding access to role models in fields that
-              may not exist locally.
-            </p>
-            <p>
-              More broadly, many organizations now offer
-              <strong>“virtual STEM adventures”</strong> and internships—online
-              labs, simulations, and remote projects that let you experiment
-              with engineering, coding, and science while getting feedback
-              from mentors.
-            </p>
-            <p class="resource-meta">
-              Best for: Students who want to observe real workplaces or connect
-              with industry professionals but can’t easily travel.
-            </p>
-            <div class="resource-links-inline">
-              <a href="https://www.virtualjobshadow.com/" target="_blank" rel="noopener">
-                Visit VirtualJobShadow
-              </a>
-              <a href="https://www.pathful.com/connect" target="_blank" rel="noopener">
-                Learn about Pathful / Nepris
-              </a>
-              <a href="https://www.google.com/search?q=virtual+STEM+adventures+for+students" target="_blank" rel="noopener">
-                Search virtual STEM adventures
-              </a>
-            </div>
-          </article>
-
-          <!-- YouthWorks MA -->
-          <article class="resource-card">
-            <h3>YouthWorks (Massachusetts)</h3>
-            <p class="resource-tag">Paid, short-term jobs for teens &amp; young adults</p>
-            <p>
-              YouthWorks is a Massachusetts state-funded employment program for
-              ages 14–25. Participants are placed into paid, short-term
-              positions with public, private, and nonprofit employers and
-              receive job-readiness coaching on skills like communication,
-              dependability, and workplace expectations.
-            </p>
-            <p>
-              For many first-time workers, YouthWorks is a bridge into the
-              labor market and a way to explore careers such as childcare,
-              parks and recreation, clerical work, or community health while
-              earning income.
-            </p>
-            <p class="resource-meta">
-              Best for: MA students who want supervised, structured work
-              experience plus a paycheck.
-            </p>
-            <a class="resource-link" href="https://www.mass.gov/service-details/youthworks-summer-jobs-program" target="_blank" rel="noopener">
-              Learn about YouthWorks
             </a>
           </article>
         </div>
