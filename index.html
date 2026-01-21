@@ -30,9 +30,22 @@
     gtag('config', 'G-QJ877GER2E', gaConfig);
 
     document.addEventListener('click', function(event) {
-      // ... and so on for your link listener
+      const link = event.target.closest('a');
+      if (link && link.href) {
+        const isExternal = link.href.startsWith('http') && !link.href.includes(window.location.hostname);
+        const isTradesButton = link.innerText.trim() === 'Skilled Trades & Apprenticeships';
+
+        // Track if it's external OR if it's your specific trades button
+        if (isExternal || isTradesButton) {
+          gtag('event', 'link_click', {
+            'link_url': link.href,
+            'link_text': link.innerText.trim() || 'no_text',
+            'outbound': isExternal,
+            'user_id': userIdFromUrl || 'anonymous'
+          });
+        }
+      }
     });
-    // --- END OF YOUR ORIGINAL CODE ---
 </script>
   
 </head>
