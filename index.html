@@ -19,29 +19,35 @@
 
     // 1. Extract the participant_id from the URL parameters
     const urlParams = new URLSearchParams(window.location.search);
-    const participantIdFromUrl = urlParams.get('participant_id');
+    const participantIdValue = urlParams.get('participant_id');
 
-    // 2. Initialize GA4 with the user_id if it exists
-    const gaConfig = { 'debug_mode': true };
-    if (participantIdFromUrl) {
-      gaConfig['user_id'] = participantIdFromUrl;
+    // 2. Set the participant_id globally for ALL events if it exists
+    if (participantIdValue) {
+      gtag('set', 'user_properties', {
+        'participant_id': participantIdValue
+      });
+      // Optional: Also send it as a custom event parameter for config
+      gtag('config', 'G-QJ877GER2E', {
+        'participant_id': participantIdValue,
+        'debug_mode': true
+      });
+    } else {
+      gtag('config', 'G-QJ877GER2E', { 'debug_mode': true });
     }
-    gtag('config', 'G-QJ877GER2E', gaConfig);
 
-    // 3. Global Click Listener for tracking
+    // 3. Click Listener for the specific "Trades" button and external links
     document.addEventListener('click', function(event) {
       const link = event.target.closest('a');
       if (link && link.href) {
         const isExternal = link.href.startsWith('http') && !link.href.includes(window.location.hostname);
         const isTradesButton = link.innerText.trim() === 'Skilled Trades & Apprenticeships';
 
-        // Track if it's an external link OR the specific trades button
         if (isExternal || isTradesButton) {
           gtag('event', 'link_click', {
             'link_url': link.href,
             'link_text': link.innerText.trim() || 'no_text',
             'outbound': isExternal,
-            'user_id': participantIdFromUrl || 'anonymous'
+            'participant_id': participantIdValue || 'anonymous'
           });
         }
       }
