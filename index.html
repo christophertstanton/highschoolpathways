@@ -11,42 +11,42 @@
        Example (replace G-XXXXXX with your tag):
   -->
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJ877GER2E"></script>
-
-<script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJ877GER2E"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    // --- THIS IS THE "REST OF YOUR CODE" YOU ALREADY HAD ---
+    // 1. Extract the participant_id from the URL parameters
     const urlParams = new URLSearchParams(window.location.search);
-    const userIdFromUrl = urlParams.get('user_id');
+    const participantIdFromUrl = urlParams.get('participant_id');
 
-    const gaConfig = {};
-    if (userIdFromUrl) {
-      gaConfig['user_id'] = userIdFromUrl;
+    // 2. Initialize GA4 with the user_id if it exists
+    const gaConfig = { 'debug_mode': true };
+    if (participantIdFromUrl) {
+      gaConfig['user_id'] = participantIdFromUrl;
     }
-
     gtag('config', 'G-QJ877GER2E', gaConfig);
 
+    // 3. Global Click Listener for tracking
     document.addEventListener('click', function(event) {
       const link = event.target.closest('a');
       if (link && link.href) {
         const isExternal = link.href.startsWith('http') && !link.href.includes(window.location.hostname);
         const isTradesButton = link.innerText.trim() === 'Skilled Trades & Apprenticeships';
 
-        // Track if it's external OR if it's your specific trades button
+        // Track if it's an external link OR the specific trades button
         if (isExternal || isTradesButton) {
           gtag('event', 'link_click', {
             'link_url': link.href,
             'link_text': link.innerText.trim() || 'no_text',
             'outbound': isExternal,
-            'user_id': userIdFromUrl || 'anonymous'
+            'user_id': participantIdFromUrl || 'anonymous'
           });
         }
       }
     });
-</script>
+  </script>
   
 </head>
 <body>
